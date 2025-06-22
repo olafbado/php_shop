@@ -29,6 +29,8 @@ This project is a Laravel application using Bootstrap for the frontend. It provi
 4. **Authentication and authorization**
    - Simple login and registration controllers allow users to create accounts and sign in.
    - Middleware restricts access to admin pages and secures authenticated routes.
+   - Install Laravel Breeze (or a similar starter kit) to scaffold login and registration.
+   - Add middleware to enforce `admin` or `client` roles and secure the routes.
 
 5. **Controllers and routes**
    - Create controllers for admin and client operations (products, categories, orders, addresses, reviews).
