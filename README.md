@@ -38,6 +38,10 @@ This project is a Laravel application using Bootstrap for the frontend. It provi
    - Build Bootstrap-based views under `resources/views/admin` and `resources/views/client`.
    - Layout files provide navigation and a consistent look for admin, client and guest pages.
    - Reusable partials show validation errors in forms.
+   - Perform manual testing by visiting the running application:
+     - Register a new user at `/register` and ensure you can log in.
+     - Browse products at `/products` and create orders.
+     - Log in as an admin user to access `/admin` and test management screens.
    - Install Laravel Breeze (or a similar starter kit) to scaffold login and registration.
    - Add middleware to enforce `admin` or `client` roles and secure the routes.
    - Create controllers for admin and client operations (products, categories, orders, addresses, reviews).
