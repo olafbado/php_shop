@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="container py-5">
+@extends('layouts.guest')
+
+@section('title', 'Login')
+
+@section('content')
 <h1 class="mb-4">Login</h1>
+@include('layouts.errors')
 <form method="POST" action="{{ url('/login') }}">
     @csrf
     <div class="mb-3">
@@ -23,5 +22,4 @@
     <button type="submit" class="btn btn-primary">Login</button>
     <a href="{{ url('/register') }}" class="btn btn-link">Register</a>
 </form>
-</body>
-</html>
+@endsection

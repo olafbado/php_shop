@@ -33,12 +33,15 @@ This project is a Laravel application using Bootstrap for the frontend. It provi
 5. **Controllers and routes**
    - Resource controllers handle CRUD logic for products, categories, orders, addresses, reviews and user management.
    - Routes are defined in `routes/web.php` and grouped by `auth` and `admin` middleware.
+
+6. **Views**
+   - Build Bootstrap-based views under `resources/views/admin` and `resources/views/client`.
+   - Layout files provide navigation and a consistent look for admin, client and guest pages.
+   - Reusable partials show validation errors in forms.
    - Install Laravel Breeze (or a similar starter kit) to scaffold login and registration.
    - Add middleware to enforce `admin` or `client` roles and secure the routes.
    - Create controllers for admin and client operations (products, categories, orders, addresses, reviews).
    - Register routes in `routes/web.php` and group them by middleware (`auth` and role checks).
-
-6. **Views**
    - Build Bootstrap-based views under `resources/views/admin` and `resources/views/client`.
    - Use Blade components and layouts for navigation, forms and tables.
 
