@@ -43,10 +43,21 @@ This project is a Laravel application using Bootstrap for the frontend. It provi
    - Write unit tests for model relationships and validation rules.
    - Add feature tests for admin CRUD operations and client order flow.
    - Use `php artisan test` with the `RefreshDatabase` trait.
+
+## Manual testing
+
+After running migrations and seeding the database you can manually verify the
+application behaviour:
+
+1. Start the dev server with `php artisan serve` and visit
+   `http://localhost:8000`.
+2. Register a new account at `/register` and confirm you can log in.
+3. Browse the product list at `/products` and attempt to place an order.
+4. Use the seeded admin account (see `DatabaseSeeder`) to log in and navigate to
+   `/admin` where you can manage products, categories, orders and users.
+5. Test creating, editing and deleting records through the admin dashboard and
+   ensure the changes are reflected on the client side.
    - Perform manual testing by visiting the running application:
-     - Register a new user at `/register` and ensure you can log in.
-     - Browse products at `/products` and create orders.
-     - Log in as an admin user to access `/admin` and test management screens.
 
 8. **Run the application**
    - Compile assets using `npm run dev`.
