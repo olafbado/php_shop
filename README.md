@@ -57,6 +57,7 @@ application behaviour:
    `/admin` where you can manage products, categories, orders and users.
 5. Test creating, editing and deleting records through the admin dashboard and
    ensure the changes are reflected on the client side.
+   - Perform manual testing by visiting the running application:
 
 8. **Run the application**
    - Compile assets using `npm run dev`.
