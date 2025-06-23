@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
@@ -30,9 +31,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin', function () {
-        return view('admin.index');
-    });
+    Route::get('/admin', [AdminDashboardController::class, 'index']);
 
     Route::resource('admin/products', AdminProductController::class);
     Route::resource('admin/categories', AdminCategoryController::class);
